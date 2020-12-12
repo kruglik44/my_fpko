@@ -1,0 +1,7 @@
+{
+  "name": "myfpko",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
