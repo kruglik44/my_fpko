@@ -1,17 +1,75 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar style="--background:  #951a1d; color: white;">
     <ion-title>
-      Tab 1
+      Главное меню
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list>
+    
+    <ion-item style="margin-top: 20px; margin-bottom: 20px;">
+      <ion-row>
+       <ion-col size-xs="3">
+         <img style="width: 56px; height: 56px;"  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjIgNXYxNGgtMjB2LTE0aDIwem0yLTJoLTI0djE4aDI0di0xOHptLTEwIDEzLjU5N3YuNDAzaC0xMHYtLjQxN2MtLjAwNC0xLjExMi4wNDQtMS43NDcgMS4zMjQtMi4wNDMgMS40MDMtLjMyNCAyLjc4Ny0uNjEzIDIuMTIyLTEuODQxLTEuOTczLTMuNjM3LS41NjMtNS42OTkgMS41NTQtNS42OTkgMi4wNzcgMCAzLjUyMSAxLjk4NSAxLjU1NiA1LjY5OS0uNjQ3IDEuMjIuNjg4IDEuNTEgMi4xMjEgMS44NDEgMS4yODQuMjk3IDEuMzI4LjkzNiAxLjMyMyAyLjA1N3ptNi05LjU5N2gtNHYyaDR2LTJ6bTAgNGgtNHYyaDR2LTJ6bTAgNGgtNHYyaDR2LTJ6Ii8+PC9zdmc+">
+       </ion-col>
+       <ion-col size-xs="9">
+         <ion-label>
+           <h1>Мой профиль</h1>
+          
+           <p>Listen, I've had a pretty messed up day...</p>
+         </ion-label>
+       </ion-col>
+      </ion-row>
+     </ion-item>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+
+    <ion-item style=" margin-bottom: 20px;">
+      <ion-row>
+       <ion-col size-xs="3">
+         <img style="width: 56px; height: 56px;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yMiAyNGgtMjB2LTI0aDE0bDYgNnYxOHptLTctMjNoLTEydjIyaDE4di0xNmgtNnYtNnptMyAxNXYxaC0xMnYtMWgxMnptMC0zdjFoLTEydi0xaDEyem0wLTN2MWgtMTJ2LTFoMTJ6bS0yLTRoNC41ODZsLTQuNTg2LTQuNTg2djQuNTg2eiIvPjwvc3ZnPg==">
+       </ion-col>
+       <ion-col size-xs="9">
+         <ion-label>
+           <h1>Документы</h1>
+           
+           <p>Listen, I've had a pretty messed up day...</p>
+         </ion-label>
+       </ion-col>
+      </ion-row>
+     </ion-item>
+
+    <ion-item style="margin-bottom: 20px;" (click) = "openWeapon()">
+     <ion-row>
+      <ion-col size-xs="3">
+        <img style="width: 56px; height: 56px;"  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkuNDMxIDguNjU3Yy0xLjM5MS0uMTU1LTIuOTM3LTEuMzY5LTMuNTMyLTIuNjUzaC03Ljg5OXY1LjExM2MyLjc5OCAwIDEuNjg2IDMuNjM0IDQuOTk2IDQuMTQ2IDEuOTg4LjMwNyAzLjI1OC0uNjk0IDMuMzgxLTEuOTMuMTk4LTEuOTc0IDEuMzMxLTMuNzI1IDMuMDU0LTQuNjc2em0tOS4xMjItMS42OTloMy41NjFjLjE4OSAwIC4zNDMuMTUzLjM0My4zNDMgMCAuMTg5LS4xNTMuMzQyLS4zNDMuMzQyaC0zLjU2MXYtLjY4NXptMCAxLjI4N2gzLjU2MWMuMTg5IDAgLjM0My4xNTMuMzQzLjM0MiAwIC4xODktLjE1My4zNDItLjM0My4zNDJoLTMuNTYxdi0uNjg0em0wIDEuOTcxdi0uNjg1aDMuNTYxYy4xODkgMCAuMzQzLjE1My4zNDMuMzQzIDAgLjE4OS0uMTUzLjM0Mi0uMzQzLjM0MmgtMy41NjF6bTMuMTI1IDQuMjU3Yy0yLjgxNC0uMjgtMi42NDQtMy41NDUuNTE4LTMuMDU3IDIuMTkyLjM0IDIuMDQ1IDMuMzEyLS41MTggMy4wNTd6bS02LjQzNC04LjQ2OXYyLjk5NmgtNi4wMTRjLS4wNi0uNDkxLS4zNS0xLjAwNi0uOTg2LTEuMTU3di0xLjgzOWg3em0tNC0uNzM0aC0yLjI5N3YtMS4wMzFjMC0uMTg4LjE4OC0uMy4zNjYtLjIwNGwxLjkzMSAxLjIzNXptMTQuODEgMi4wN2MtLjI0Ny0uMTc5LS40NzktLjM4LS43MDItLjYxOC41MjktLjI5NyAxLjAyNy0uNDk0IDEuNjgxLS41NDIuMjQxLS4wMTguMzQ5LjI3My4xMDcuMzc2LS40ODYuMjA4LS44MTguNDEzLTEuMDg2Ljc4NHptLTMuMDMzIDUuMjkzYy0uMzI2LjU3LS44NzUgMS4xNDYtMS4zNDEgMS4xODQtLjE0NS4wMTItLjI0NC0uMTIzLS4xODgtLjI1My4xMDctLjI0Ny43NzgtLjc0NS42MjItMS41NTIuNDkyLjA4Ljc4My4zMzEuOTA3LjYyMXptNS4yOS0zLjE2Yy0xLjU1Ny44MDItMi41OTcgMi4zNTQtMi43MzggNC4xMS43NzcuMzIzIDEuNjcxLjkxNyAxLjY3MSAyLjkzOHYyLjQ2NWMwIC44NDcuMzQgMS4wMTQgMS4yMTYgMS4wMTRoMi40OTNjLjk5IDAgMS4yOTEtLjMwOSAxLjI5MS0uOTk5IDAtMS41MjctLjM5Ni0zLjgyOC0xLjk5Ny02LjA3OS0uNzgyLTEuMTAxLTEuODAzLTEuODUtMS45MzYtMy40NDl6bS0uNjMgMy45NzNjLS4zOTEgMC0uNzA3LS4zMTYtLjcwNy0uNzA4cy4zMTYtLjcwOC43MDctLjcwOC43MDguMzE2LjcwOC43MDgtLjMxOC43MDgtLjcwOC43MDh6Ii8+PC9zdmc+">
+      </ion-col>
+      <ion-col size-xs="9">
+        <ion-label>
+          <h1>Мое оружие</h1>
+         
+          <p>Listen, I've had a pretty messed up day...</p>
+        </ion-label>
+      </ion-col>
+     </ion-row>
+    </ion-item>
+
+    <ion-item style="margin-bottom: 20px;">
+      <ion-row>
+       <ion-col size-xs="3">
+         <img style="width: 56px; height: 56px;"  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNC45NDJjMS44MjcgMS4xMDUgMy40NzQgMS42IDUgMS44MzN2Ny43NmMwIDEuNjA2LS40MTUgMS45MzUtNSA0Ljc2di0xNC4zNTN6bTktMS45NDJ2MTEuNTM1YzAgNC42MDMtMy4yMDMgNS44MDQtOSA5LjQ2NS01Ljc5Ny0zLjY2MS05LTQuODYyLTktOS40NjV2LTExLjUzNWMzLjUxNiAwIDUuNjI5LS4xMzQgOS0zIDMuMzcxIDIuODY2IDUuNDg0IDMgOSAzem0tMiAxLjk2Yy0yLjQ0Ni0uMTI0LTQuNS0uNjExLTctMi40MTYtMi41IDEuODA1LTQuNTU0IDIuMjkyLTcgMi40MTZ2OS41NzVjMCAzLjA0MiAxLjY5IDMuODMgNyA3LjEwNyA1LjMxMy0zLjI4MSA3LTQuMDY1IDctNy4xMDd2LTkuNTc1eiIvPjwvc3ZnPg==">
+       </ion-col>
+       <ion-col size-xs="9">
+         <ion-label>
+           <h1>Охрана</h1>
+          
+           <p>Listen, I've had a pretty messed up day...</p>
+         </ion-label>
+       </ion-col>
+      </ion-row>
+     </ion-item>
+
+    
+  </ion-list>
 </ion-content>

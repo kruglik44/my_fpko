@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background:  #951a1d; color: white;">
+    <ion-title>
+      Моё оружие
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click) = "goBack()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item (click)="presentModal()" style="margin-top: 20px; margin-bottom: 20px;">
+      <ion-row>
+       <ion-col size-xs="4">
+         <img style="margin-top:10px;"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/AK47.svg/1200px-AK47.svg.png">
+       </ion-col>
+       <ion-col size-xs="8">
+         <ion-label>
+           <h1>Автомат АК-47</h1>
+            <h3>ДОО №42334</h3>
+            <p>Учтено</p>
+         </ion-label>
+       </ion-col>
+      </ion-row>
+     </ion-item>
+
+     <ion-item (click)="presentModal()" style="margin-bottom: 20px;">
+      <ion-row>
+       <ion-col size-xs="4">
+         <img style="margin-top:10px;"  src="https://www.clker.com/cliparts/a/Y/B/i/v/g/famas-gun-hi.png">
+       </ion-col>
+       <ion-col size-xs="8">
+         <ion-label>
+           <h1>Автомат FAMAS</h1>
+            <h3>LHS №12334</h3>
+            <p>Учтено</p>
+         </ion-label>
+       </ion-col>
+      </ion-row>
+     </ion-item>
+
+     <ion-item (click)="presentModal()" style="margin-bottom: 20px;">
+      <ion-row>
+       <ion-col size-xs="4">
+         <img style="margin-top:10px;"  src="https://www.downloadclipart.net/svg/22757-m16-svg.svg">
+       </ion-col>
+       <ion-col size-xs="8">
+         <ion-label>
+           <h1>Карабин M4A1</h1>
+            <h3>LHS №72334</h3>
+            <p>Учтено</p>
+         </ion-label>
+       </ion-col>
+      </ion-row>
+     </ion-item>
+  </ion-list>
+</ion-content>

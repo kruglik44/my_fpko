@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background:  #951a1d; color: white;">
+    <ion-title>{{weapon.name}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click) = "close()">Закрыть</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h1>{{weapon.name}} </h1>
+              </ion-label>
+             </ion-item>
+            <ion-item>
+             <ion-label>
+              Серия: {{weapon.series}} 
+             </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                Номер: {{weapon.number}}
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                Тип: {{weapon.type}}
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                Год изготовления: {{weapon.productionYear}}
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
