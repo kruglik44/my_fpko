@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background:  #951a1d; color: white;">
+    <ion-title>
+      Мои документы
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click) = "goBack()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-toolbar>
+  <ion-segment (ionChange)="segmentChanged($event)" value = "docs">
+    <ion-segment-button value="docs">
+      <ion-label>Документы</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="scans">
+      <ion-label>Отсканированные документы</ion-label>
+    </ion-segment-button>
+    
+  </ion-segment>
+</ion-toolbar>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xs="12">
+        <ion-list>
+          <ion-list-header>
+            <h1>Общие документы</h1>
+          </ion-list-header>
+          <ion-item>
+            <ion-label>
+              <h1>Паспорт</h1>
+            </ion-label>
+            <ion-label>
+              <h2>**** ****23</h2>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <h1>СНИЛС</h1>
+            </ion-label>
+            <ion-label>
+              <h2>********55</h2>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-list-header>
+            <h1>Разрешительные документы</h1>
+          </ion-list-header>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

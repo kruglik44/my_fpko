@@ -12,4 +12,7 @@ export class Tab1Page {
   openWeapon(){
     this.router.navigate(['tabs/tab1/weapon-list']);
   }
+  openDocuments(){
+    this.router.navigate(['tabs/tab1/document-list']);
+  }
 }

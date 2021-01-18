@@ -7,6 +7,8 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { WeaponComponent } from './weapons/weapon/weapon.component';
+import { WeaponModalComponent } from './weapons/modal/weapon-modal/weapon-modal.component';
+import { DocumentComponent } from './documents/document/document.component';
 
 @NgModule({
   imports: [
@@ -16,6 +18,6 @@ import { WeaponComponent } from './weapons/weapon/weapon.component';
     ExploreContainerComponentModule,
     Tab1PageRoutingModule
   ],
-  declarations: [Tab1Page, WeaponComponent]
+  declarations: [Tab1Page, WeaponComponent, WeaponModalComponent, DocumentComponent]
 })
 export class Tab1PageModule {}

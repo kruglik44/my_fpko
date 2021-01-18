@@ -7,7 +7,7 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./weapon-modal.component.scss'],
 })
 export class WeaponModalComponent implements OnInit {
-
+  slotToShow: string = "common";
   constructor(public modalController: ModalController) { }
 
   ngOnInit() {}
@@ -16,5 +16,9 @@ export class WeaponModalComponent implements OnInit {
 
   async close(){
     await this.modalController.dismiss();
+  }
+  segmentChanged(ev: any) {
+    this.slotToShow = ev.detail.value;
+    console.log(this.slotToShow);
   }
 }
